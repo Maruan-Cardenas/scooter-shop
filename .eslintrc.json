@@ -1,0 +1,12 @@
+{
+  "extends": ["./node_modules/standard/eslintrc.json", "next/core-web-vitals"],
+  "plugins": ["hexagonal-architecture"],
+  "overrides": [
+    {
+      "files": ["contexts/{backend,frontend}/*/src/**/*.ts"],
+      "rules": {
+        "hexagonal-architecture/enforce": ["error"]
+      }
+    }
+  ]
+}
