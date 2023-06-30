@@ -5,9 +5,9 @@ import { ButtonReviewScooterProps } from './domain/types'
 
 const ButtonReviewScooter: React.FC<ButtonReviewScooterProps> = ({ scooterImg, scooterAlt, title, link }) => {
   return (
-    <div className='flex flex-col justify-center pt-10'>
-      <Link href={link}>
-        <Image className='w-full' src={scooterImg} alt={scooterAlt} />
+    <div className='h-full my-10'>
+      <Link className='flex flex-col justify-between w-full h-full' href={link}>
+        <Image className='object-cover w-full md:h-full' src={scooterImg} alt={scooterAlt} />
         <h3 className='w-full text-2xl font-bold text-center'>{title}</h3>
       </Link>
     </div>

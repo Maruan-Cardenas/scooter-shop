@@ -13,9 +13,10 @@ export const Home = () => {
           En nuestra tienda encontrarás los mejores patinetes de todas las marcas, ademas de los mejores recambio. Tenemos ruedas, baterías, cargadores, motores, frenos, guardabarros, etc...
         </p>
       </header>
-      <section className='w-[90%] md:w-[70%]'>
+      <section className='w-[90%] md:w-[70%] '>
         <h2 className='pt-10 text-3xl font-bold'>Análisis de los mejores scooter eléctricos del 2023</h2>
-        {
+        <div className='grid-flow-col-dense md:grid md:gap-5 md:place-items-center'>
+          {
           ButtonReviewScooterItems.map((item) => (
             <ButtonReviewScooter
               key={item.id}
@@ -25,7 +26,8 @@ export const Home = () => {
               link={item.link}
             />
           ))
-        }
+          }
+        </div>
       </section>
     </>
   )

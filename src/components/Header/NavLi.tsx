@@ -12,8 +12,10 @@ export const Li: React.FC<LiProps> = ({ id, principalLi, secondaryLi }) => {
       onMouseLeave={() => setIsOpen('')}
       onClick={() => setIsOpen(isOpen === principalLi.name ? '' : principalLi.name)}
     >
-      <div className='flex justify-between items-center gap-2 text-lg w-[50%] md:w-auto [&>svg]:fill-current [&>svg]:text-white [&>svg]:w-10'>
-        <Link href={principalLi.link}>{principalLi.name}</Link>
+      <div className='flex justify-between items-center gap-2 text-lg w-[40%] md:w-auto md:gap-0 [&>svg]:fill-current [&>svg]:text-white'>
+        <Link href={principalLi.link}>
+          {principalLi.name}
+        </Link>
         {secondaryLi && <ArrowDown />}
       </div>
       {(isOpen === principalLi.name && secondaryLi) && (
